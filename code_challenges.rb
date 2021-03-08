@@ -30,21 +30,13 @@ letter_a = 'a'
 # Expected output: ['tea', 'soda water']
 
 def match_letter arr, let
-    store_arr = []
-    arr.map do |value|
-        if value.include?(let)
-            return  store_arr << value
-        else
-
-        end
-    
-    end
-    store_arr
+     arr.select { |value| value if value.include? let }
 end
 # what needs to be done is I need to check all of the values in the array and find the words that match the letter that is given as the argumetnt. The two I tried to use the most and refactor to work was the find and the include methods. I tried to combine with conditoinals as well in hopes that it would return the value that matched 
 
 # I've tried so many ways on this one and could not figure it out. have to throw in the towel ]=
 p match_letter beverages_array , letter_o
+p match_letter beverages_array , letter_a
 
 
 
